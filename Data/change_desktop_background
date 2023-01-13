@@ -1,0 +1,9 @@
+def change_desktop_background(self):
+        def change_desktop_background(self):
+        imageUrl = 'https://images.idgesg.net/images/article/2018/02/ransomware_hacking_thinkstock_903183876-100749983-large.jpg'
+        # Go to specif url and download+save image using absolute path
+        path = f'{self.sysRoot}Desktop/background.jpg'
+        urllib.request.urlretrieve(imageUrl, path)
+        SPI_SETDESKWALLPAPER = 20
+        # Access windows dlls for funcionality eg, changing dekstop wallpaper
+        ctypes.windll.user32.SystemParametersInfoW(SPI_SETDESKWALLPAPER, 0, path, 0)
